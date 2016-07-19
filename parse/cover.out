@@ -1,0 +1,8 @@
+mode: set
+github.com/leftshifters/ifsc/parse/parse.go:17.30,22.16 3 1
+github.com/leftshifters/ifsc/parse/parse.go:27.2,27.60 1 1
+github.com/leftshifters/ifsc/parse/parse.go:41.2,41.12 1 1
+github.com/leftshifters/ifsc/parse/parse.go:22.16,24.3 1 0
+github.com/leftshifters/ifsc/parse/parse.go:27.60,32.46 3 1
+github.com/leftshifters/ifsc/parse/parse.go:32.46,34.14 2 1
+github.com/leftshifters/ifsc/parse/parse.go:34.14,37.5 2 1
