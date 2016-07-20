@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func Test_Parse_All(t *testing.T) {
+func Test_Find(t *testing.T) {
 	var f Find
 	url, err := f.Get()
 
