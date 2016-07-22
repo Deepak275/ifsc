@@ -9,11 +9,20 @@ describe("Parser", function() {
   })
 
   it("parse()", function() {
-    this.timeout(40000)
     let p = new Parser({})
     branches = p.parse("test/ifsc.xls")
-    // branches = p.parse("68774.xls")
     expect(branches.branches.length).to.be.equal(4)
+  })
+
+  it("find()", function() {
+    this.timeout(30000)
+    let p = new Parser()
+    branches = p.parse("test/ifsc.xls")
+    // branches = p.parse("68774.xls")
+    // console.time("find")
+    found = branches.find("mumbai wadia bail")
+    // console.timeEnd("find")
+    expect(found.length).to.be.equal(1)
   })
 
 })
