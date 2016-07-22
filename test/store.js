@@ -41,36 +41,6 @@ describe("Store", function() {
     expect(store.branches.length).to.be.equal(4)
   })
 
-  it("downloadDump()", function(done) {
-    this.timeout(3000)
-    let filePath = "test/ifsc_32mb.xls"
-
-    // Delete old file if it exists
-    if (utils.fileExists(filePath)) {
-      fs.unlinkSync(filePath)
-    }
-
-    // Set timeout to stop file download after 2 seconds
-    setInterval(() => {
-      fileExists = utils.fileExists(filePath)
-      expect(fileExists).to.be.true
-
-      // Delete file after completion of the test
-      if (utils.fileExists(filePath)) {
-        fs.unlinkSync(filePath)
-      }
-
-      done()
-    }, 2000)
-
-    // Start file download
-    let s = new Store({ diskPath: filePath })
-    s.downloadDump((err) => {
-      expect(err).to.be.null
-    })
-
-  })
-
   it("readLocalStore()", function(done) {
     let filePath = "test/ifsc.xls"
     let s = new Store({ diskPath: filePath })
