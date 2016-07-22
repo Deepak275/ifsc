@@ -14,6 +14,8 @@ class Branch {
     this.city = options.city
     this.district = options.district
     this.state = options.state
+
+    this.searchString = this.bank + " " + this.ifsc + " " + this.micr + " " + this.branch + " " + this.address + " " + this.contact + " " + this.city + " " + this.district + " " + this.state
   }
 }
 
