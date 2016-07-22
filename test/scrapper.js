@@ -1,5 +1,7 @@
 var expect = require("chai").expect;
 var Scrapper = require('../lib/scrapper')
+var utils = require('../lib/utils')
+var fs = require('fs')
 
 describe("Scrapper", function() {
 
@@ -24,9 +26,15 @@ describe("Scrapper", function() {
   })
 
   it("download()", function(done) {
+
+    var filePath = "test/ifsc_download.xls"
+    if (utils.fileExists()) {
+      fs.unlinkSync(filePath)
+    }
+
     this.timeout(10000)
     let s = new Scrapper({ scanURL: "https://www.rbi.org.in/scripts/neft.aspx" })
-    s.download("https://rbidocs.rbi.org.in/rdocs/Content/DOCs/IFCB2009_02.xls", (err) => {
+    s.download("https://rbidocs.rbi.org.in/rdocs/Content/DOCs/IFCB2009_02.xls", filePath, (err) => {
       expect(err).to.be.equal(null)
       done()
     })
