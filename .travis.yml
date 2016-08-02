@@ -1,0 +1,15 @@
+language: go
+
+go:
+  - 1.6
+
+before_install:
+  - go get github.com/stretchr/testify
+  - go get github.com/PuerkitoBio/goquery
+  - go get github.com/extrame/xls
+
+script:
+  - go test -v -timeout 99999s -coverprofile cover.out; go tool cover -html=cover.out -o cover.html
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
