@@ -1,0 +1,23 @@
+{
+  "name": "ifsc",
+  "version": "0.0.1",
+  "description": "find and search ifsc and micr codes for all banks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leftshifters/ifsc.git"
+  },
+  "keywords": [
+    "ifsc",
+    "micr"
+  ],
+  "author": "Sudhanshu Raheja",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leftshifters/ifsc/issues"
+  },
+  "homepage": "https://github.com/leftshifters/ifsc#readme"
+}
