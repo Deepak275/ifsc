@@ -1,1 +1,3 @@
 *.xls
+gocode
+node_modules
