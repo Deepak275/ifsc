@@ -1,3 +1,4 @@
 *.xls
 gocode
+test/ifsc_32mb.xls
 node_modules

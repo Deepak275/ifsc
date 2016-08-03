@@ -10,7 +10,7 @@ describe('inMemory', function () {
   })
 
  // checks for the string search results
-  it('find() mehthod should fetch all matching branches', function () {
+  it('find() method should fetch all matching branches', function () {
     let p = new Parser();
     const branches = p.parse("test/ifsc.xls");
     const output = branches.find("mumbai",'');
